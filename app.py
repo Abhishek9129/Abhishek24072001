@@ -6,8 +6,8 @@ import numpy as np
 pipe = pickle.load(open('pipe.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
 
-st.title("Laptop Predictor")
-
+st.title("Fare Prognosis")
+st.title("Initial Price  Based on Laptops Catagory Only")
 # brand
 company = st.selectbox('Brand',df['Company'].unique())
 
@@ -23,7 +23,7 @@ weight = st.number_input('Weight of the Laptop')
 # Touchscreen
 touchscreen = st.selectbox('Touchscreen',['No','Yes'])
 
-# IPS
+# IPS pannel
 ips = st.selectbox('IPS',['No','Yes'])
 
 # screen size
@@ -63,3 +63,4 @@ if st.button('Predict Price'):
 
     query = query.reshape(1,12)
     st.title("The predicted price of this configuration is " + str(int(np.exp(pipe.predict(query)[0]))))
+

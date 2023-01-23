@@ -1,3 +1,2 @@
-# Abhishek24072001
-Config files for my GitHub profile.
-mini project
+# price_prediction
+this is my class project
